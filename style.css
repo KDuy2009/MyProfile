@@ -54,14 +54,29 @@ body, html {
 
 .name {
   font-size: 36px;
-  color: #00f0ff;
+  color: #00f0ff; /* Màu xanh dương chủ đạo */
   margin-bottom: 30px;
   text-shadow: 0 0 10px #00f0ff88;
-  padding: 10px 20px;
+  padding: 6px 16px;
   border: 2px solid #00f0ff;
   border-radius: 12px;
   background-color: rgba(0, 0, 0, 0.3);
   display: inline-block;
+  background-image: linear-gradient(90deg, #00f0ff, #0099cc, #00f0ff); /* Gradient chủ đạo */
+  background-size: 200% 100%; /* Cho phép gradient chạy */
+  animation: gradientAnimation 3s linear infinite; /* Hiệu ứng chạy màu */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 200% 0;
+  }
+  50% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 .links {
