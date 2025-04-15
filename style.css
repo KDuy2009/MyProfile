@@ -46,6 +46,7 @@ body, html {
   border: 4px solid #00f0ff;
   box-shadow: 0 4px 10px rgba(0, 240, 255, 0.5);
   margin-bottom: 15px;
+  image-rendering: auto;
 }
 
 .name {
@@ -54,19 +55,10 @@ body, html {
   margin-bottom: 30px;
   text-shadow: 0 0 10px #00f0ff88;
   padding: 10px 20px;
-  border: 2px solid #00f0ff;
+  border: 2px solid #00f0ff88;
   border-radius: 12px;
-  background: linear-gradient(45deg, #00f0ff, #ffffff, #00f0ff);
-  background-size: 400% 400%;
-  animation: rainbow 5s ease infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-@keyframes rainbow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .links {
@@ -79,17 +71,16 @@ body, html {
 
 .link-box {
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 12px;
+  padding: 12px 16px;
   border: 1px solid #00f0ff88;
   border-radius: 12px;
   color: #00f0ff;
   font-size: 18px;
   text-decoration: none;
+  transition: 0.3s ease;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
-  transition: 0.3s ease;
 }
 
 .link-box:hover {
@@ -101,15 +92,11 @@ body, html {
 .app-icon {
   width: 24px;
   height: 24px;
+  display: inline-block;
   vertical-align: middle;
 }
 
-.zalo-icon {
-  object-fit: contain;
-  border-radius: 4px;
-}
-
-/* Responsive */
+/* Responsive cho điện thoại */
 @media (max-width: 480px) {
   .profile-pic {
     width: 90px;
