@@ -78,24 +78,18 @@ body, html {
   text-decoration: none;
   transition: 0.3s ease;
   display: flex;
-  align-items: center;
+  align-items: center;        /* Căn icon và text theo chiều dọc */
   justify-content: center;
   gap: 10px;
 }
 
-.link-box:hover {
-  background-color: rgba(0, 240, 255, 0.1);
-  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
-}
-
-.link-box i {
-  font-size: 20px;
-}
-
+.link-box i,
 .zalo-icon {
   width: 20px;
   height: 20px;
   object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* Responsive cho điện thoại */
