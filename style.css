@@ -54,16 +54,15 @@ body, html {
 
 .name {
   font-size: 36px;
-  color: #00f0ff; /* Màu xanh dương chủ đạo */
+  color: transparent; /* Làm cho chữ trong suốt */
   margin-bottom: 30px;
   text-shadow: 0 0 10px #00f0ff88;
   padding: 6px 16px;
-  border: 2px solid #00f0ff;
+  border: 2px solid #00f0ff; /* Viền màu xanh dương */
   border-radius: 12px;
-  background-color: rgba(0, 0, 0, 0.3);
-  display: inline-block;
   background-image: linear-gradient(90deg, #00f0ff, #0099cc, #00f0ff); /* Gradient chủ đạo */
-  background-size: 200% 100%; /* Cho phép gradient chạy */
+  background-clip: text; /* Áp dụng gradient vào chữ */
+  display: inline-block;
   animation: gradientAnimation 3s linear infinite; /* Hiệu ứng chạy màu */
 }
 
@@ -79,39 +78,30 @@ body, html {
   }
 }
 
-.links {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 80%;
-  max-width: 300px;
-}
-
 .link-box {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: transparent; /* Làm nền trong suốt */
   padding: 12px;
-  border: 1px solid #00f0ff88;
+  border: 2px solid #00f0ff; /* Viền màu xanh dương */
   border-radius: 12px;
-  color: #00f0ff;
+  color: transparent; /* Làm cho chữ trong suốt */
   font-size: 18px;
   text-decoration: none;
   transition: 0.3s ease;
   display: flex;
-  align-items: center; /* Canh giữa theo chiều dọc */
-  justify-content: center; /* Canh giữa theo chiều ngang */
+  align-items: center; /* Canh giữa icon và chữ */
+  justify-content: center; /* Canh giữa */
   gap: 10px; /* Khoảng cách giữa icon và chữ */
+  background-image: linear-gradient(90deg, #00f0ff, #0099cc, #00f0ff); /* Gradient màu xanh */
+  background-clip: text; /* Áp dụng gradient vào chữ */
+}
+
+.link-box:hover {
+  background-color: rgba(0, 240, 255, 0.1); /* Thêm hiệu ứng mờ khi hover */
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5); /* Hiệu ứng sáng khi hover */
 }
 
 .link-box i {
   font-size: 20px; /* Điều chỉnh kích thước icon phù hợp */
-  line-height: 1;
-}
-
-.link-box i {
-  font-size: 18px;
-  width: 20px;
-  text-align: center;
-  line-height: 1;
 }
 
 /* Icon Zalo riêng để nhỏ hơn */
