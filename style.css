@@ -54,16 +54,17 @@ body, html {
 
 .name {
   font-size: 36px;
-  color: transparent; /* Làm cho chữ trong suốt */
+  color: #00f0ff; /* Màu chữ mặc định */
   margin-bottom: 30px;
   text-shadow: 0 0 10px #00f0ff88;
   padding: 6px 16px;
-  border: 2px solid #00f0ff; /* Viền màu xanh dương */
+  border: 2px solid #00f0ff; /* Viền xanh dương */
   border-radius: 12px;
-  background-image: linear-gradient(90deg, #00f0ff, #0099cc, #00f0ff); /* Gradient chủ đạo */
-  background-clip: text; /* Áp dụng gradient vào chữ */
   display: inline-block;
-  animation: gradientAnimation 3s linear infinite; /* Hiệu ứng chạy màu */
+  background-image: linear-gradient(90deg, #00f0ff, #0099cc, #00f0ff); /* Gradient màu xanh */
+  background-clip: text; /* Chỉ áp dụng cho chữ */
+  -webkit-background-clip: text; /* Hỗ trợ cho Webkit */
+  animation: gradientAnimation 3s linear infinite; /* Hiệu ứng màu chạy */
 }
 
 @keyframes gradientAnimation {
@@ -79,11 +80,11 @@ body, html {
 }
 
 .link-box {
-  background-color: transparent; /* Làm nền trong suốt */
+  background-color: transparent; /* Nền trong suốt */
   padding: 12px;
-  border: 2px solid #00f0ff; /* Viền màu xanh dương */
+  border: 2px solid #00f0ff; /* Viền xanh dương */
   border-radius: 12px;
-  color: transparent; /* Làm cho chữ trong suốt */
+  color: transparent; /* Chữ trong suốt để áp dụng gradient */
   font-size: 18px;
   text-decoration: none;
   transition: 0.3s ease;
@@ -93,6 +94,7 @@ body, html {
   gap: 10px; /* Khoảng cách giữa icon và chữ */
   background-image: linear-gradient(90deg, #00f0ff, #0099cc, #00f0ff); /* Gradient màu xanh */
   background-clip: text; /* Áp dụng gradient vào chữ */
+  -webkit-background-clip: text; /* Hỗ trợ cho Webkit */
 }
 
 .link-box:hover {
@@ -101,7 +103,7 @@ body, html {
 }
 
 .link-box i {
-  font-size: 20px; /* Điều chỉnh kích thước icon phù hợp */
+  font-size: 20px; /* Điều chỉnh kích thước icon */
 }
 
 /* Icon Zalo riêng để nhỏ hơn */
