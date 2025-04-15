@@ -85,9 +85,15 @@ body, html {
 }
 
 .link-box i {
-  font-size: 20px;
-  width: 24px;
+  font-size: 18px;
+  width: 20px;
   text-align: center;
+  line-height: 1;
+}
+
+/* Icon Zalo riêng để nhỏ hơn */
+.zalo-icon {
+  font-size: 16px;
 }
 
 .link-box:hover {
@@ -112,6 +118,10 @@ body, html {
   }
 
   .link-box i {
-    font-size: 18px;
+    font-size: 16px;
+  }
+
+  .zalo-icon {
+    font-size: 14px;
   }
 }
