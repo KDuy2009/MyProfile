@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Giới Thiệu Bản Thân</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="anime-bg.mp4" type="video/mp4">
+  </video>
+
+  <div class="content">
+    <div class="profile-frame">
+      <img src="duy.jpg" alt="Ảnh của tôi" class="profile-pic">
+      <div class="name">Nguyễn Khánh Duy</div>
+    </div>
+
+    <div class="links">
+      <a href="#" class="link-box" onclick="openApp('facebook')">
+        <i class="fab fa-facebook"></i><span>Facebook</span>
+      </a>
+      <a href="#" class="link-box" onclick="openApp('zalo')">
+        <img src="zalo-logo.png" class="zalo-icon" alt="Zalo"><span>Zalo</span>
+      </a>
+      <a href="#" class="link-box" onclick="openApp('instagram')">
+        <i class="fab fa-instagram"></i><span>Instagram</span>
+      </a>
+      <a href="#" class="link-box" onclick="openApp('tiktok')">
+        <i class="fab fa-tiktok"></i><span>TikTok</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Modal Greeting -->
+  <div id="greeting-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Xin chào!</h2>
+      <p>Chào mừng bạn đến với trang cá nhân của tôi.</p>
+    </div>
+  </div>
+
+  <script>
+    // Hàm mở ứng dụng
+    function openApp(app) {
+      switch(app) {
+        case 'facebook':
+          window.location.href = "https://www.facebook.com/share/1BcK3TmiAZ/"; // Link Facebook của bạn
+          break;
+        case 'zalo':
+          window.location.href = "https://zalo.me/0358757207"; // Link zalo.me
+          break;
+        case 'instagram':
+          window.location.href = "https://www.instagram.com/nguyenkhanhduy3003?igsh=Zmpyd3ZmeWQxN21j"; // Link Instagram
+          break;
+        case 'tiktok':
+          window.location.href = "https://www.tiktok.com/@nguyen.duy029?_t=ZS-8vXkAC6O4Do&_r=1"; // Link TikTok
+          break;
+      }
+    }
+
+    // Hiển thị modal khi trang tải
+    window.onload = function() {
+      var modal = document.getElementById("greeting-modal");
+      modal.style.display = "block";
+    };
+
+    // Đóng modal khi nhấn vào dấu "X"
+    function closeModal() {
+      var modal = document.getElementById("greeting-modal");
+      modal.style.display = "none";
+    }
+  </script>
+</body>
+</html>
