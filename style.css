@@ -29,16 +29,14 @@ body, html {
   height: 100%;
   text-align: center;
   color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3); /* Giảm opacity để ảnh rõ hơn */
   padding: 20px;
 }
 
+/* Khung ảnh và tên */
 .profile-frame {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .profile-pic {
@@ -49,45 +47,36 @@ body, html {
   border: 4px solid #00f0ff;
   box-shadow: 0 4px 10px rgba(0, 240, 255, 0.5);
   margin-bottom: 15px;
-  image-rendering: auto;
+  image-rendering: auto; /* Tối ưu ảnh sắc nét */
 }
 
 /* Phần tên */
 .name {
   font-size: 36px;
-  color: transparent; /* Làm chữ trong suốt */
+  color: #00f0ff; /* Màu chữ xanh dương */
   margin-bottom: 30px;
-  text-shadow: 0 0 10px #00f0ff88;
+  text-shadow: 0 0 10px #00f0ff88; /* Ánh sáng mờ cho chữ */
   padding: 6px 16px;
   border: 2px solid #00f0ff; /* Viền xanh dương */
   border-radius: 12px;
   display: inline-block;
-  background-image: linear-gradient(90deg, #00f0ff, #0099cc, #00f0ff); /* Gradient màu xanh */
-  background-clip: text; /* Áp dụng gradient vào chữ */
-  -webkit-background-clip: text; /* Hỗ trợ cho Webkit */
-  animation: gradientAnimation 3s linear infinite; /* Hiệu ứng màu chạy */
-}
-
-/* Hiệu ứng chạy màu */
-@keyframes gradientAnimation {
-  0% {
-    background-position: 200% 0;
-  }
-  50% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
 }
 
 /* Các ô liên kết */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 80%;
+  max-width: 300px;
+}
+
 .link-box {
   background-color: transparent; /* Nền trong suốt */
   padding: 12px;
   border: 2px solid #00f0ff; /* Viền xanh dương */
   border-radius: 12px;
-  color: transparent; /* Chữ trong suốt */
+  color: #00f0ff; /* Màu chữ xanh dương */
   font-size: 18px;
   text-decoration: none;
   transition: 0.3s ease;
@@ -95,9 +84,6 @@ body, html {
   align-items: center; /* Canh giữa icon và chữ */
   justify-content: center; /* Canh giữa */
   gap: 10px; /* Khoảng cách giữa icon và chữ */
-  background-image: linear-gradient(90deg, #00f0ff, #0099cc, #00f0ff); /* Gradient màu xanh */
-  background-clip: text; /* Áp dụng gradient vào chữ */
-  -webkit-background-clip: text; /* Hỗ trợ cho Webkit */
 }
 
 .link-box:hover {
@@ -107,17 +93,6 @@ body, html {
 
 .link-box i {
   font-size: 20px; /* Điều chỉnh kích thước icon */
-}
-
-/* Icon Zalo riêng để nhỏ hơn */
-.zalo-icon {
-  font-size: 16px;
-}
-
-.link-box:hover {
-  background-color: #00f0ff;
-  color: #000;
-  box-shadow: 0 0 15px #00f0ff99;
 }
 
 /* Responsive cho điện thoại */
@@ -133,13 +108,5 @@ body, html {
 
   .link-box {
     font-size: 16px;
-  }
-
-  .link-box i {
-    font-size: 16px;
-  }
-
-  .zalo-icon {
-    font-size: 14px;
   }
 }
